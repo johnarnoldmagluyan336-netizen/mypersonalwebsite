@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills I'm Developing | Cinematic Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">ABOUT</a>
+                <div class="dropdown-content">
+                    <a href="skills.html">Skills I'm Developing</a>
+                    <a href="goals.html">My Goals as a Student</a>
+                    <a href="funfacts.html">Fun Facts About Me</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <a href="javascript:void(0);" class="logout-button" onclick="confirmLogout()">LOG OUT</a>
+        </ul>
+    </nav>
+
+    <section id="section2"></section>
+
+    <section id="drop">
+        <h2>Skills I'm Developing</h2>
+        <p>As a student, I am actively building a diverse skill set that reflects my passion for technology and continuous growth.</p>
+
+        <section id="skills">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'IT')">Information Technology</button>
+                <button class="tablinks" onclick="openTab(event, 'GraphicDesign')">Graphic Design</button>
+                <button class="tablinks" onclick="openTab(event, 'PublicSpeaking')">Public Speaking</button>
+                <button class="tablinks" onclick="openTab(event, 'ProblemSolving')">Problem Solving</button>
+            </div>
+
+            <div id="IT" class="tabcontent">
+                <h3>Information Technology</h3>
+                <ul>
+                    <li>Web development (<strong>HTML, CSS, and JavaScript</strong>)</li>
+                    <li><strong>Responsive & user-friendly</strong>design</li>
+                    <li>Modern UI/UX layout design</li>
+                </ul>
+            </div>
+
+            <div id="GraphicDesign" class="tabcontent" style="display:none;">
+                <h3>Graphic Design</h3>
+                <ul>
+                    <li><strong>UI/UX</strong> layout and website visual design</li>
+                    <li>Creating modern graphics and visual assets</li>
+                    <li>Designing clean and engaging visual layouts</li>
+                </ul>
+            </div>
+
+            <div id="PublicSpeaking" class="tabcontent" style="display:none;">
+                <h3>Public Speaking</h3>
+                <ul>
+                    <li>Presenting idea clear and confident</li>
+                    <li>Communicate effective with teams and audience</li>
+                    <li>Sharong technical concepts in simple terms</li>
+                </ul>
+            </div>
+
+            <div id="ProblemSolving" class="tabcontent" style="display:none;">
+                <h3>Problem Solving and Critical Thinking</h3>
+                <ul>
+                    <li>Debugging and troubleshooting code</li>
+                    <li>Finding efficient logical solutions</li>
+                    <li>Adapting quickly to new technical challenge</li>
+                </ul>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 John Arnold M. Magluyan. All rights reserved. | Cinematic Portfolio</p>
+    </footer>
+    <div class="footer-divider"></div>
+
+    <script>
+        function openTab(evt, tabName) {
+            const tabcontents = document.getElementsByClassName("tabcontent");
+            for (let i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].style.display = "none";
+            }
+
+            const tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('.tablinks').click();
+        });
+
+        function confirmLogout() {
+            if (confirm("Are you sure you want to log out?")) {
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = 'login.html';
+            }
+        }
+    </script>
+</body>
+</html>

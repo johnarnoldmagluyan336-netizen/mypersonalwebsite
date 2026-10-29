@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About Me | Cinematic Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">ABOUT</a>
+                <div class="dropdown-content">
+                    <a href="skills.html">Skills I'm Developing</a>
+                    <a href="goals.html">My Goals as a Student</a>
+                    <a href="funfacts.html">Fun Facts About Me</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <a href="javascript:void(0);" class="logout-button" onclick="confirmLogout()">LOG OUT</a>
+        </ul>
+    </nav>
+
+    <section id="section2"></section>
+
+    <section id="drop">
+        <h2>Fun Facts About Me</h2>
+        <p>Hello and welcome! This section is all about the fun and fascinating tidbits that define me. Discover my enthusiasm for coding, my quest to find the best coffee spots, and the hobbies that bring joy to my life. Hover over any card to reveal more.</p>
+
+<div class="funfact-container">
+            <div class="funfact-card">
+                <div class="funfact-inner">
+                    <div class="funfact-front"><p>The Feline Boss</p></div>
+                    <div class="funfact-back"><p>As a devoted cat lover, my daily routine is always hapilly supervised by my furry feline companion at home.</p></div>
+                </div>
+            </div>
+            <div class="funfact-card">
+                <div class="funfact-inner">
+                    <div class="funfact-front"><p>Soundtrack to Productivity</p></div>
+                    <div class="funfact-back"><p>Whenever I am working or focusing on a task, I always have music playing in the background to power me through the day.</p></div>
+                </div>
+            </div>
+            <div class="funfact-card">
+                <div class="funfact-inner">
+                    <div class="funfact-front"><p>Trailblazer to the World Traveler</p></div>
+                    <div class="funfact-back"><p>Out in the real world, I love hitting hiking trails and am eagerly gearing up to pack my bags and explore new places as a traveler soon.</p></div>
+                </div>
+            </div>
+            <div class="funfact-card">
+                <div class="funfact-inner">
+                    <div class="funfact-front"><p>Digital Adventure</p></div>
+                    <div class="funfact-back"><p>When it is time to unwind and relax, I turn into a dedicated gamer, diving into my favorite online video games.</p></div>
+                </div>
+            </div>
+        </div>
+
+    <div class="funfact-container">
+            <div class="funfact-card">
+                <div class="funfact-inner">
+                    <div class="funfact-front"><p>Always Ready to Help</p></div>
+                    <div class="funfact-back"><p>I naturally take pride iin being reliable and convenient whenever anyone around me needs a helping hand.</p></div>
+                </div>
+            </div>
+            <div class="funfact-card">
+                <div class="funfact-inner">
+                    <div class="funfact-front"><p>Low-Key & Humble</p></div>
+                    <div class="funfact-back"><p>Even while showing up for others, I stay low-key and humbly view myselft as just an option.</p></div>
+                </div>
+            </div>
+            <div class="funfact-card">
+                <div class="funfact-inner">
+                    <div class="funfact-front"><p>Screen Time Specialist</p></div>
+                    <div class="funfact-back"><p>My entertainment routine is packed with a love for watching movies, emotional K-dramas, and epic anime, which means i have completely mastered fast-paced subtitle.</p></div>
+                </div>
+            </div>
+            <div class="funfact-card">
+                <div class="funfact-inner">
+                    <div class="funfact-front"><p>Perfectly Balanced</p></div>
+                    <div class="funfact-back"><p>Behind my skinny frame is a unique personality independent mindset with knowing when to be dependent and lean on others when it counts.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 John Arnold M. Magluyan. All rights reserved. | Cinematic Portfolio</p>
+    </footer>
+    <div class="footer-divider"></div>
+
+    <script>
+        function confirmLogout() {
+            if (confirm("Are you sure you want to log out?")) {
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = 'login.html';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Goals as a Student | Cinematic Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">ABOUT</a>
+                <div class="dropdown-content">
+                    <a href="skills.html">Skills I'm Developing</a>
+                    <a href="goals.html">My Goals as a Student</a>
+                    <a href="funfacts.html">Fun Facts About Me</a>
+                </div>
+            </li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <a href="javascript:void(0);" class="logout-button" onclick="confirmLogout()">LOG OUT</a>
+        </ul>
+    </nav>
+
+    <section id="section2"></section>
+
+    <section id="drop">
+        <h2>My Goals As A Student</h2>
+        <p style="text-align: center;">Key aspirations guiding my academic and professional journey. Click any card to expand.</p>
+
+        <div class="goal-grid">
+            <div class="goal-card" onclick="toggleGoalDetails(1)">
+                <div class="goal-header">Short-Term Goals</div>
+                <p><strong>Mastering Web Development.</strong></p>
+                <div class="goal-details" id="goal1-details">
+                    <p>I am focusing on sharpening my HTML, CSS, JavaScript skills to build responsive, user-friendly web applications ans set a solid foundation for my future in tech.</p>
+                </div>
+            </div>
+
+            <div class="goal-card" onclick="toggleGoalDetails(2)">
+                <div class="goal-header">Long-Term Goals</div>
+                <p>Front-End Developer.</p>
+                <div class="goal-details" id="goal2-details">
+                    <p>My long-term focus is to evolve into a skilled front-end developer, contributing to impactful web projects and delivering seamless user experiences.</p>
+                </div>
+            </div>
+
+            <div class="goal-card" onclick="toggleGoalDetails(3)">
+                <div class="goal-header">Personal Development</div>
+                <p>Self-Improvement & Growth</p>
+                <div class="goal-details" id="goal3-details">
+                    <p>I strive to be a well-rounded individual bt improving my problem-solving abilities, communication skills, and resilience when facing new challenges.</p>
+                </div>
+            </div>
+
+            <div class="goal-card" onclick="toggleGoalDetails(4)">
+                <div class="goal-header">Career Goals</div>
+                <p>Gain hands-on industry experience and grow into a leadership role in tech.</p>
+                <div class="goal-details" id="goal4-details">
+                    <p>I iam to guide teams, lead successful projects, and make strategic decisions by continuously building my leadership skills through real-world experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 John Arnold M. Magluyan. All rights reserved. | Cinematic Portfolio</p>
+    </footer>
+    <div class="footer-divider"></div>
+
+    <script>
+        function toggleGoalDetails(id) {
+            const details = document.getElementById('goal' + id + '-details');
+            details.classList.toggle('active');
+        }
+
+        function confirmLogout() {
+            if (confirm("Are you sure you want to log out?")) {
+                localStorage.removeItem('isLoggedIn');
+                window.location.href = 'login.html';
+            }
+        }
+    </script>
+</body>
+</html>
